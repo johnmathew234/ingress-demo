@@ -1,5 +1,5 @@
 kind: Ingress
-apiVersion: v1
+apiVersion: networking.k8s.io/v1
 metadata:
   name: example-rtf-ingress
   namespace: example-rtf-ingress
