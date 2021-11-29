@@ -22,4 +22,4 @@ spec:
           service:
             name: service-name
             port:
-              name: service-port
+              name: 8080
