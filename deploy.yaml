@@ -1,21 +1,23 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: gke-dummy
   namespace: rtf 
   labels:
-    business-group: b0beec90-c6cc-4c36-8f7c-ef1f8f91253b
-    environment: 4956d3d6-14d3-423b-9165-4a39038ad298
+    business-group: business-group-id
+    environment: environment-id
 spec:
   ingressClassName: rtf-nginx 
+  tls: 
+  - hosts:
+      - app-name.example.com
+    secretName: example-tls
   rules:
-  - host: apiopsrtf.eastus.cloudapp.azure.com
-    http:
-      paths: 
-      - pathType: Prefix
-        path: /
-        backend: 
-          service:
-            name: service-name
-            port:
-              name: 80
+    - host: app-name.example.com 
+      http:
+        paths: 
+        - path: /
+          pathType:
+          backend: 
+            serviceName: service-name
+            servicePort: 80
