@@ -8,10 +8,10 @@ metadata:
     environment: environment-id
 spec:
   ingressClassName: rtf-nginx 
-  tls: 
-  - hosts:
-      - rtf.example.com
-    secretName: example-tls
+  #tls: 
+  #- hosts:
+      #- rtf.example.com
+    #secretName: example-tls
   rules:
   - host: rtf.example.com
     http:
