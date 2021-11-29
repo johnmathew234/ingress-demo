@@ -1,20 +1,23 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: gke-dummy
-  namespace: rtf
+  namespace: rtf 
   labels:
     business-group: business-group-id
     environment: environment-id
 spec:
   ingressClassName: rtf-nginx 
-  
+  tls: 
+  - hosts:
+      - rtf.example.com
+    secretName: example-tls
   rules:
-    - host: rtf.example.com
-      http:
-        paths: 
-        - path: /
-          pathType:
-          backend: 
-            serviceName: service-name
-            servicePort: 80
+  - host: rtf.example.com
+    http:
+      paths: 
+      - pathType: Prefix
+        path: /
+        backend: 
+          serviceName: service-name
+          servicePort: 80
