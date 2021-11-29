@@ -1,17 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: example-rtf-ingress
+  name: gke-dummy
   namespace: rtf 
   labels:
     business-group: b0beec90-c6cc-4c36-8f7c-ef1f8f91253b
     environment: 4956d3d6-14d3-423b-9165-4a39038ad298
 spec:
   ingressClassName: rtf-nginx 
-  tls: 
-  - hosts:
-      - apiopsrtf.eastus.cloudapp.azure.com
-    secretName: example-tls
   rules:
   - host: apiopsrtf.eastus.cloudapp.azure.com
     http:
@@ -22,4 +18,4 @@ spec:
           service:
             name: service-name
             port:
-              name: 8080
+              name: 80
