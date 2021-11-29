@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dummy-gke
+  name: gke-dummy
   namespace: rtf 
   labels:
     business-group: business-group-id
