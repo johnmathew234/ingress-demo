@@ -4,7 +4,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
       #rewrite ^/app-name(/|$)(.*) /$2 break;
-    nginx.ingress.kubernetes.io/ssl-redirect: "true" 
+    #nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
   name: rtf-ingress-template
   namespace: rtf
   labels:
