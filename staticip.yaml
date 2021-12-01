@@ -17,7 +17,7 @@ kind: Ingress
 metadata:
   name: helloweb
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: ingress-nginx-controller
+    kubernetes.io/ingress.global-static-ip-name: ingress-nginx-controller-ip
   labels:
     app: hello
 spec:
