@@ -27,5 +27,5 @@ spec:
   - port: 80
     targetPort: 8080
   type: LoadBalancer
-  loadBalancerIP: "YOUR.IP.ADDRESS.HERE"
+  loadBalancerIP: 34.82.71.46
 # [END container_helloapp_service]
