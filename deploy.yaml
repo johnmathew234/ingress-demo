@@ -13,7 +13,7 @@ spec:
       #- rtf.example.com
     #secretName: example-tls
   rules:
-  - host: rtf.example.com
+  - host: rtf.examplesss.com
     http:
       paths: 
       - pathType: Prefix
