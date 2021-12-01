@@ -5,7 +5,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
       #rewrite ^/app-name(/|$)(.*) /$2 break;
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    kubernetes.io/ingress.global-static-ip-name: rtf.example.com
+    #kubernetes.io/ingress.global-static-ip-name: rtf.example.com
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
     #nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
   name: rtf-ingress-template
@@ -20,8 +20,8 @@ spec:
   - hosts:
       - rtf.example.com
     secretName: nginx-ingress-tls
-  type: LoadBalancer
-  loadBalancerIP: 34.82.71.46
+  #type: LoadBalancer
+  #loadBalancerIP: 34.82.71.46
   rules:
   - host: rtf.example.com
     http:
