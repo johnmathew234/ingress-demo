@@ -32,4 +32,5 @@ spec:
           service:
             name: service-name
             port:
-              number: service-port
+              #number: service-port
+              name: service-port
